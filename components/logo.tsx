@@ -1,6 +1,6 @@
 import React from "react";
 import { BrainCircuit } from "lucide-react";
-import { cn } from "@/lib/utiils";
+import { cn } from "@/lib/utils";
 import { Poppins } from "next/font/google";
 
 type LogoProps = {

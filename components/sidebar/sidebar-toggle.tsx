@@ -1,8 +1,8 @@
-import { cn } from "@/lib/utiils";
+import { cn } from "@/lib/utils";
 import { useSidebarStore } from "@/stores/sidebar-store";
 import Image from "next/image";
 import React from "react";
-import { Button } from "../button";
+import { Button } from "../ui/button";
 
 const sidebarToggle = () => {
   const { isMinimal, handleChangeSidebar, handleOpenOrClose } =
@@ -10,7 +10,7 @@ const sidebarToggle = () => {
   return (
     <>
       <div
-        className={cn("cursor-pointer hidden", "lg:block")}
+        className={cn("cursor-pointer hidden lg:block")}
         onClick={handleChangeSidebar}
         is-navbar-minimal={isMinimal ? "true" : undefined}
       >

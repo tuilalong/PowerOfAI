@@ -24,7 +24,7 @@ const ThemeToggle = () => {
             key={value}
             className={cn(
               "flex items-center p-22 rounded-lg px-7 w-full justify-center cursor-pointer text-muted-foreground font-medium",
-              theme === value && "bg-gray-950 text-white"
+              theme === value && "bg-gray-950 text-white p-2"
             )}
           >
             {value === "dark" ? <Moon /> : <Sun />}

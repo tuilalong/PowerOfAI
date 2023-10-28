@@ -1,14 +1,18 @@
+"use client";
+
 import MobileSidebar from "@/components/sidebar/mobile-sidebar";
 import UpgradeProModal from "@/components/dashboard/upgrade-pro-sidebar";
 import Sidebar from "@/components/sidebar/sidebar";
 import { Topbar } from "@/components/topbar";
 import { cn } from "@/lib/utils";
-
 import React from "react";
+import { useTheme } from "next-themes";
 
 const DashboardLayout = (props: { children: React.ReactNode }) => {
   const userLimitCount = 0;
   const isProPlan = false;
+  const { theme } = useTheme();
+
   return (
     <div>
       <header>
@@ -30,7 +34,8 @@ const DashboardLayout = (props: { children: React.ReactNode }) => {
         <UpgradeProModal isProPlan={isProPlan} /> */}
         <div
           className={cn(
-            "bg-background h-[calc(100vh-56px)] lg:rounded-3xl lg:p-7"
+            "h-[calc(100vh-56px)] lg:rounded-3xl lg:p-7",
+            theme === "light" ? "bg-white" : "bg-black"
           )}
         >
           {props.children}
